@@ -5,7 +5,7 @@
 
 ## Experienced SQL sleuths start here
 
-A crime has taken place and the detective needs your help. The detective gave you the crime scene report, but you somehow lost it. You vaguely remember that the crime was a ​murder​ that occurred sometime on ​Jan.15, 2018​ and that it took place in ​SQL City​. Start by retrieving the corresponding crime scene report from the police department’s database.
+> A crime has taken place and the detective needs your help. The detective gave you the crime scene report, but you somehow lost it. You vaguely remember that the crime was a ​murder​ that occurred sometime on ​Jan.15, 2018​ and that it took place in ​SQL City​. Start by retrieving the corresponding crime scene report from the police department’s database.
 
 ## Witnesses Repport
 
@@ -18,9 +18,9 @@ SQL COMMANDS :
 ```
 
 > Response :
-Description: Security footage shows that there were 2 witnesses. 
-* The first witness lives at the last house on "Northwestern Dr". 
-* The second witness, named Annabel, lives somewhere on "Franklin Ave".
+> Description: Security footage shows that there were 2 witnesses. 
+> * The first witness lives at the last house on "Northwestern Dr". 
+> * The second witness, named Annabel, lives somewhere on "Franklin Ave".
 
 /**************************************************************************************/
 
@@ -35,8 +35,9 @@ SQL COMMANDS -->Witness 1 :
 ```
 
 > Response :
-id	    name	        license_id  address_number  address_street_name     ssn
-14887   Morty Schapiro  118009      4919            Northwestern Dr         111564949
+|id	    |name	        |license_id  |address_number  |address_street_name     |ssn      |
+|------:|:--------------|:-----------|:------|:-------|:-----------------------|:--------|
+|14887  |Morty Schapiro |118009      |4919            |Northwestern Dr         |111564949|
 
 SQL COMMANDS --> Witness 2 :
 ```SQL
@@ -64,8 +65,6 @@ WHERE person_id IN (14887,16371)
 > Response :
 | name      |Transcript    |
 |----------:|:-------------|
-| Morty Schapiro| I heard a gunshot and then saw a man run out. He had a "Get Fit Now Gym" bag. The membership number on the bag started with "48Z". Only gold members have those bags. The man got into a car with a plate that included "H42W". |
-| Annabel Miller| I saw the murder happen, and I recognized the killer from my gym when I was working out last week on January the 9th. |
 
 name	            transcript
 Morty Schapiro	    I heard a gunshot and then saw a man run out. He had a "Get Fit Now Gym" bag. The membership number on the bag started with "48Z". Only gold members have those bags. The man got into a car with a plate that included "H42W".
