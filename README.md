@@ -34,7 +34,7 @@ SQL COMMANDS -->Witness 1 :
     ORDER BY address_number DESC LIMIT 1;
 ```
 
-> Response :
+Response :
 |id	    |name	        |license_id  |address_number  |address_street_name     |ssn      |
 |------:|:--------------|:-----------|:------|:-------|:-----------------------|:--------|
 |14887  |Morty Schapiro |118009      |4919            |Northwestern Dr         |111564949|
