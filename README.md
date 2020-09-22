@@ -22,8 +22,6 @@ SQL COMMANDS :
 > * The first witness lives at the last house on "Northwestern Dr". 
 > * The second witness, named Annabel, lives somewhere on "Franklin Ave".
 
-/**************************************************************************************/
-
 ## WITNESSES :
 
 SQL COMMANDS -->Witness 1 :
@@ -49,10 +47,9 @@ AND name LIKE '%Annabel%'
 ```
 
 > Response :
-id	    name            license_id  address_number  address_street_name     ssn
-16371	Annabel Miller	490173	    103             Franklin Ave            318771143
-
-/**************************************************************************************/
+| id	 | name	          | license_id  | address_number  | address_street_name   | ssn       |
+| ------ | -------------- | ----------- | --------------- | --------------------- | --------- |
+| 16371  | Annabel Miller | 490173      | 103             | Franklin Ave          | 318771143 |
 
 ## Transcripts Witnesses
 
@@ -70,8 +67,6 @@ WHERE person_id IN (14887,16371)
 name	            transcript
 Morty Schapiro	    I heard a gunshot and then saw a man run out. He had a "Get Fit Now Gym" bag. The membership number on the bag started with "48Z". Only gold members have those bags. The man got into a car with a plate that included "H42W".
 Annabel Miller	    I saw the murder happen, and I recognized the killer from my gym when I was working out last week on January the 9th.
-
-/**************************************************************************************/
 
 ## SUSPECTS : 
 
@@ -91,8 +86,6 @@ AND drivers_license.plate_number LIKE "%H42W%"
 id	    person_id   name            membership_start_date	membership_status	membership_id	check_in_date	check_in_time	check_out_time	id	        name	        license_id	    address_number	address_street_name	    ssn	        id	    age	height	eye_color	hair_color	gender	plate_number	car_make	car_model
 48Z55	67318	    Jeremy Bowers	20160101	            gold	            48Z55           20180109        1530            1700            67318	    Jeremy Bowers	423327	        530	            Washington Pl, Apt 3A	871539279	423327	30	70	    brown	    brown	    male	0H42W2	        Chevrolet	Spark LS
 
-/**************************************************************************************/
-
 ## Who is the murder ?
 SQL COMMANDS --> Check the solution 
 ```SQL
@@ -109,8 +102,6 @@ If you think you're up for a challenge, try querying the interview transcript of
 If you feel especially confident in your SQL skills, try to complete this final step with no more than 2 queries. 
 Use this same INSERT statement with your new suspect to check your answer.
 
-/**************************************************************************************/
-
 ## Interview Suspect 1
 SQL COMMANDS --> interview Suspect 1
 ```SQL
@@ -126,8 +117,6 @@ person_id	    transcript
                 I don't know her name but I know she's around 5'5" (65") or 5'7" (67"). 
                 She has red hair and she drives a Tesla Model S. 
                 I know that she attended the SQL Symphony Concert 3 times in December 2017.
-
-/**************************************************************************************/
 
 ## Suspect 2 
 
@@ -148,9 +137,6 @@ AND facebook_event_checkin.event_name="SQL Symphony Concert"
 id	    age	height	eye_color	hair_color	gender	plate_number	car_make	car_model	id      name	            license_id	address_number	address_street_name	    ssn	        person_id	event_id	event_name	            date
 202298	68	66	    green	    red	        female	500123	        Tesla	    Model S	    99716	Miranda Priestly	202298	    1883	        Golden Ave	            987756388	99716	    1143	    SQL Symphony Concert	20171206
 
-
-/**************************************************************************************/
-
 ## Interview Suspect 2
 
 SQL COMMANDS --> interview Suspect 1
@@ -162,8 +148,6 @@ WHERE person_id=99716
 
 > Response :
 No data returned
-
-/**************************************************************************************/
 
 ## Who is the murder ?
 SQL COMMANDS --> Check the solution 
@@ -177,5 +161,3 @@ value
 Congrats, you found the brains behind the murder! 
 Everyone in SQL City hails you as the greatest SQL detective of all time. 
 Time to break out the champagne!
-
-/**************************************************************************************/
