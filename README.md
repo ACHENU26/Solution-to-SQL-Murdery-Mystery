@@ -17,7 +17,8 @@ SQL COMMANDS :
     AND date = '20180115' AND type = 'murder';
 ```
 
-> Response :
+**Response :**
+
 > Description: Security footage shows that there were 2 witnesses. 
 > * The first witness lives at the last house on "Northwestern Dr". 
 > * The second witness, named Annabel, lives somewhere on "Franklin Ave".
@@ -32,7 +33,7 @@ SQL COMMANDS -->Witness 1 :
     ORDER BY address_number DESC LIMIT 1;
 ```
 
-Response :
+**Response :**
 
 | id	 | name	          | license_id  | address_number  | address_street_name   | ssn       |
 | ------ | -------------- | ----------- | --------------- | --------------------- | --------- |
@@ -46,7 +47,7 @@ WHERE address_street_name='Franklin Ave'
 AND name LIKE '%Annabel%'
 ```
 
-> Response :
+**Response :**
 | id	 | name	          | license_id  | address_number  | address_street_name   | ssn       |
 | ------ | -------------- | ----------- | --------------- | --------------------- | --------- |
 | 16371  | Annabel Miller | 490173      | 103             | Franklin Ave          | 318771143 |
@@ -60,9 +61,11 @@ FROM interview
 WHERE person_id IN (14887,16371)
 ```
 
-> Response :
-| name      |Transcript    |
-|----------:|:-------------|
+**Response :**
+| name           | Transcript |
+| -------------- | -------------|
+| Morty Schapiro | I heard a gunshot and then saw a man run out. He had a "Get Fit Now Gym" bag. The membership number on the bag started with "48Z". Only gold members have those bags. The man got into a car with a plate that included "H42W". |
+| Annabel Miller | I saw the murder happen, and I recognized the killer from my gym when I was working out last week on January the 9th. |
 
 name	            transcript
 Morty Schapiro	    I heard a gunshot and then saw a man run out. He had a "Get Fit Now Gym" bag. The membership number on the bag started with "48Z". Only gold members have those bags. The man got into a car with a plate that included "H42W".
@@ -82,7 +85,7 @@ AND get_fit_now_member.id LIKE "48Z%"
 AND drivers_license.plate_number LIKE "%H42W%"
 ```
 
-> Response :
+**Response :**
 id	    person_id   name            membership_start_date	membership_status	membership_id	check_in_date	check_in_time	check_out_time	id	        name	        license_id	    address_number	address_street_name	    ssn	        id	    age	height	eye_color	hair_color	gender	plate_number	car_make	car_model
 48Z55	67318	    Jeremy Bowers	20160101	            gold	            48Z55           20180109        1530            1700            67318	    Jeremy Bowers	423327	        530	            Washington Pl, Apt 3A	871539279	423327	30	70	    brown	    brown	    male	0H42W2	        Chevrolet	Spark LS
 
@@ -93,7 +96,7 @@ INSERT INTO solution VALUES (1, 'Jeremy Bowers');
     SELECT value FROM solution;
 ```
 
-> Response :
+**Response :**
 
 value
 Congrats, you found the murderer! But wait, there's more... 
@@ -110,7 +113,7 @@ FROM interview
 WHERE person_id = 67318
 ```
 
-> Response :
+**Response :**
 
 person_id	    transcript
 67318	        I was hired by a woman with a lot of money. 
@@ -133,7 +136,7 @@ BETWEEN 65 AND 67
 AND facebook_event_checkin.event_name="SQL Symphony Concert"
 ```
 
-> Response :
+**Response :**
 id	    age	height	eye_color	hair_color	gender	plate_number	car_make	car_model	id      name	            license_id	address_number	address_street_name	    ssn	        person_id	event_id	event_name	            date
 202298	68	66	    green	    red	        female	500123	        Tesla	    Model S	    99716	Miranda Priestly	202298	    1883	        Golden Ave	            987756388	99716	    1143	    SQL Symphony Concert	20171206
 
@@ -146,7 +149,7 @@ FROM interview
 WHERE person_id=99716
 ```
 
-> Response :
+**Response :**
 No data returned
 
 ## Who is the murder ?
@@ -156,7 +159,7 @@ INSERT INTO solution VALUES (1, 'Miranda Priestly');
         SELECT value FROM solution;
 ```
 
-> Response :
+**Response :**
 value
 Congrats, you found the brains behind the murder! 
 Everyone in SQL City hails you as the greatest SQL detective of all time. 
